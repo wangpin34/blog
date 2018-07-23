@@ -13,4 +13,3 @@
 * [【译】python 静态方法和类方法的区别](https://github.com/wangpin34/blog/issues/11)
 * [【译】 三个小tip，提高微服务的弹性](https://github.com/wangpin34/blog/issues/17)
 * [【译】小知识 - 认证方式](https://github.com/wangpin34/blog/issues/16)
-
