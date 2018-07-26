@@ -7,6 +7,7 @@
 * [Restful API 设计](https://github.com/wangpin34/blog/issues/2)
 * [懒人思维](https://github.com/wangpin34/note/issues/3)
 * [WebRTC 建立连接的过程](https://github.com/wangpin34/blog/issues/12)
+* [OAuth 入门](https://github.com/wangpin34/blog/issues/18)
 
 
 ## 翻译
