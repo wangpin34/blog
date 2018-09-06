@@ -8,6 +8,8 @@
 * [懒人思维](https://github.com/wangpin34/note/issues/3)
 * [WebRTC 建立连接的过程](https://github.com/wangpin34/blog/issues/12)
 * [OAuth 入门](https://github.com/wangpin34/blog/issues/18)
+* [跨域问题之 CORS](https://github.com/wangpin34/blog/issues/21)
+* [应用国际化时，必须知道的几件事](https://github.com/wangpin34/blog/issues/23)
 
 
 ## 翻译
