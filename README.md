@@ -12,6 +12,7 @@
 * [应用国际化时，必须知道的几件事](https://github.com/wangpin34/blog/issues/23)
 * [gulp拾遗(1)](https://github.com/wangpin34/blog/issues/26)
 * [gulp 拾遗 (2) - 认识 glob](https://github.com/wangpin34/blog/issues/27)
+* [2018 总结 - thinking more，doing the best](https://github.com/wangpin34/blog/issues/28)
 
 ## 翻译
 * [【译】python 静态方法和类方法的区别](https://github.com/wangpin34/blog/issues/11)
