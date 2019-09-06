@@ -3,7 +3,8 @@
 # 目录
 
 ## 文章
-* [周记 2019/8/9：开发 purify reader](https://github.com/wangpin34/blog/issues/39)
+* [周记 2019/08/16：Threejs 和 parallax scrolling](https://github.com/wangpin34/blog/issues/42)
+* [周记 2019/08/09：开发 purify reader](https://github.com/wangpin34/blog/issues/39)
 * [读后感：Five Ways to Lie with Charts](https://github.com/wangpin34/blog/issues/38)
 * [5 must-read tips before start your own ui lib](https://github.com/wangpin34/blog/issues/37)
 * [32 岁了，计划一下未来](https://github.com/wangpin34/blog/issues/36)
