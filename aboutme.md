@@ -1,10 +1,16 @@
 # 王品
 求职意向： 前端工程师
+
 软件技能：reactjs
+
 工作技能：设计模式/重构/需求管理/英语
-联系方式：18321140470 / dmoneh@163.com
+
+联系方式：dmoneh@163.com
+
 github id： wangpin34
+
 知乎专栏：https://zhuanlan.zhihu.com/wangpin
+
 ## 2019 年做了什么 ？
 * 从 0 开始打造了第一个内部 ui 框架
 * 维护内部项目：
