@@ -1,0 +1,22 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Create Weekly Note
+
+on:
+  schedule:
+    - cron: "0 0 * * MON"
+
+jobs:
+  create_note:
+    runs-on: macos-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install jq
+        run: brew install jq
+      - name: Create Note from Template
+        run: bash blog.weekly-note.sh
+        env:
+          TOKEN: ${{secrets.GITHUB_TOKEN}}
