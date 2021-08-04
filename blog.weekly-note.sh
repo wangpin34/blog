@@ -1,6 +1,6 @@
 #!/bin/sh
 user=wangpin34
-repo=hello-world
+repo=blog
 
 friday=$(date -v+friday +"%Y/%m/%d")
 title="$friday: <topic>"
