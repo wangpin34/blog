@@ -7,25 +7,18 @@ interface FileBody {
   sha?: string
 }
 
-export default async function updateTOC(content: string) {
-  let body: FileBody = {content: encode(content), message: 'update toc'}
+export default async function updateOrCreateFile(path: string, content: string, message: string) {
+  let body: FileBody = {content: encode(content), message}
   try {
-    const fetchTocResp = await performJSON(HTTP.Method.GET, `/repos/${process.env.GITHUB_REPOSITORY}/contents/table-of-contents.md`)
+    const fetchTocResp = await performJSON(HTTP.Method.GET, `/repos/${process.env.GITHUB_REPOSITORY}/contents/${path}`)
     if (fetchTocResp.status != 404) {
       const json = await fetchTocResp.json()
       body.sha = json.sha
     }
-    const resp = await performJSON(HTTP.Method.PUT, `/repos/${process.env.GITHUB_REPOSITORY}/contents/table-of-contents.md`, {body: JSON.stringify(body) })
+    const resp = await performJSON(HTTP.Method.PUT, `/repos/${process.env.GITHUB_REPOSITORY}/contents/${path}`, {body: JSON.stringify(body) })
     console.log(resp)
     return resp
   } catch (err) {
     throw err
   }
-}
-
-if (process.argv[1] === __filename) {
-  (async () => {
-    const resp = await updateTOC('123456')
-    console.log(resp)
-  })()
 }
