@@ -1,6 +1,4 @@
-# Blog
-
-## Table of Contents
+# Table of Contents
 
 - [2021&#x2F;07&#x2F;30: ipad OS 的生产力探索](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;69)
 - [2021&#x2F;07&#x2F;23: 下雨天点外卖，我错了么?](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;68)
@@ -32,9 +30,3 @@
 - [读后感：Five Ways to Lie with Charts](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;38)
 - [5 must-read tips before start your own ui lib ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;37)
 - [32 岁了，计划一下未来](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;36)
-
-## LICENSE
-
-Feel free to make use of codes in this repo.
-
-保留文章版权，转载请注明出处（作者姓名，文章原始链接，等），并务必保留文章原内容不变。
