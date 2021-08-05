@@ -24,6 +24,6 @@ jobs:
       - name: Install jq
         run: brew install jq
       - name: Create Note from Template
-        run: bash blog.weekly-note.sh -t "${{ github.event.inputs.name }}"
+        run: bash blog.weekly-note.sh -t "${{ github.event.inputs.topic }}"
         env:
           TOKEN: ${{secrets.GITHUB_TOKEN}}
