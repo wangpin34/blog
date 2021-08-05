@@ -1,9 +1,13 @@
-#!/bin/sh
-user=wangpin34
-repo=blog
+#!/bin/bash
+
+while getopts t: flag; do
+  case "${flag}" in
+  t) topic=${OPTARG} ;;
+  esac
+done
 
 friday=$(date -v+friday +"%Y/%m/%d")
-title="$friday: <topic>"
+title="$friday: $topic"
 
 template=$(cat blog.weekly-note-template.md)
 
@@ -14,4 +18,4 @@ curl -X POST \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: Bearer $TOKEN" \
   -d "$body" \
-  "https://api.github.com/repos/$user/$repo/issues"
+  "${GITHUB_API_URL}/repos/$GITHUB_REPOSITORY/issues"
