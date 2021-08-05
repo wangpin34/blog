@@ -1,13 +1,7 @@
 name: Update TOC
 on:
   issues:
-    - opened
-    - edited
-    - deleted
-    - closed
-    - reopened
-    - locked
-    - unlocked
+    types: [opened, edited, deleted, closed, reopened, locked, unlocked]
   workflow_dispatch:
   
   schedule:
