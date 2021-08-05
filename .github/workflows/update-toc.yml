@@ -1,7 +1,9 @@
 name: Update TOC
 on:
+  workflow_dispatch:
+  
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 */1 * * *'
 
 jobs:
   build:
