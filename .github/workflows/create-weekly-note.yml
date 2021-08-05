@@ -5,7 +5,12 @@ name: Create Weekly Note
 
 on:
   workflow_dispatch:
-    
+    inputs:
+      topic:
+        description: "The Topic"
+        required: true
+        default: <The Topic>
+
   schedule:
     - cron: "0 0 * * MON"
 
