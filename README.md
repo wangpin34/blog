@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [2021&#x2F;08&#x2F;06: 游戏是精神鸦片吗？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;70)
 - [2021&#x2F;07&#x2F;30: ipad OS 的生产力探索](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;69)
 - [2021&#x2F;07&#x2F;23: 下雨天点外卖，我错了么?](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;68)
 - [2021&#x2F;07&#x2F;16: 为什么 youtube 的广告可以免费关闭？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;67)
@@ -31,7 +32,6 @@
 - [周记 2019&#x2F;8&#x2F;9：开发 purify reader](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;39)
 - [读后感：Five Ways to Lie with Charts](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;38)
 - [5 must-read tips before start your own ui lib ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;37)
-- [32 岁了，计划一下未来](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;36)
 
 ## LICENSE
 
