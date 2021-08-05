@@ -1,7 +1,7 @@
 name: Update TOC
 on:
   schedule:
-    - cron: "1-59 * * * *"
+    - cron: '0-59 * * * *'
 
 jobs:
   build:
