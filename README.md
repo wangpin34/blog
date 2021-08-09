@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [2021&#x2F;08&#x2F;13: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;72)
 - [Chromebook for frontend dev](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;71)
 - [2021&#x2F;08&#x2F;06: 游戏是精神鸦片吗？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;70)
 - [2021&#x2F;07&#x2F;30: ipad OS 的生产力探索](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;69)
@@ -31,7 +32,6 @@
 - [周记 2019&#x2F;08&#x2F;23: 敏捷开发走下神坛](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;43)
 - [周记 2019&#x2F;8&#x2F;16: Threejs 和 parallax scrolling](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;42)
 - [周记 2019&#x2F;8&#x2F;9：开发 purify reader](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;39)
-- [读后感：Five Ways to Lie with Charts](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;38)
 
 ## LICENSE
 
