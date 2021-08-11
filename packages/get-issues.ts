@@ -1,4 +1,5 @@
 import { performJSON, HTTP } from './api'
+import qs from 'qs'
 
 interface Issue {
   id: string
@@ -19,9 +20,29 @@ interface Issue {
 }
 
 export default async function getIssues() {
+  let issues: Array<Issue> = []
+  let hasNext = true
+  const perPage = 30
+  const queryGen = ((perPage: number) => {
+      let page = 1
+      return {
+        next: () => qs.stringify({
+          per_page: perPage,
+          page: page++
+        })
+      }
+    })(perPage)
+
   try {
-    const resp = await performJSON(HTTP.Method.GET, `/repos/${process.env.GITHUB_REPOSITORY}/issues`)
-    const issues = await resp.json() as Array<Issue>
+    do {
+      const resp = await performJSON(HTTP.Method.GET, `/repos/${process.env.GITHUB_REPOSITORY}/issues?${queryGen.next()}`)
+      const _issues = await resp.json() as Array<Issue>
+      if (_issues.length < perPage ) {
+        hasNext = false
+      }
+      issues = [...issues, ..._issues]
+    } while(hasNext)
+    
     return issues
   } catch (err) {
     throw err
