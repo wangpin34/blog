@@ -7,7 +7,6 @@
 - [2021&#x2F;10&#x2F;08: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;82)
 - [2021&#x2F;10&#x2F;01: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;81)
 - [自己动手做一个 markdown renderer](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;80)
-- [unifiedjs 简介](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;79)
 - [2021&#x2F;09&#x2F;24: innovation 取胜的秘诀](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;78)
 - [2021&#x2F;09&#x2F;10: 给自己立个 flag](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;76)
 - [2021&#x2F;08&#x2F;27: vitejs 能取代 create-react-app 吗？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;74)
