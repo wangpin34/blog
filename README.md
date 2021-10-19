@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [jq 简介：简单实用的命令行 json 工具](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;86)
 - [2021&#x2F;10&#x2F;22: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;85)
 - [ unifiedjs 简介](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;84)
 - [2021&#x2F;10&#x2F;15: 中国的技术困境](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;83)
