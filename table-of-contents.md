@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [2021&#x2F;10&#x2F;29: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;87)
+- [2021&#x2F;10&#x2F;29: OceanBase 刷 star，技术公司开源难题](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;87)
 - [jq 简介：简单实用的命令行 json 工具](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;86)
 - [2021&#x2F;10&#x2F;22: 比特币与区块链的通俗解释](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;85)
 - [ unifiedjs 简介](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;84)
