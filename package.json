@@ -21,7 +21,7 @@
     "js-base64": "^3.6.1",
     "minimist": "^1.2.5",
     "mustache": "^4.2.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "promise.series": "^0.2.0",
     "qs": "^6.10.1",
     "rxjs": "^6.6.6",
