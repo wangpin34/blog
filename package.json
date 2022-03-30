@@ -19,7 +19,7 @@
     "figlet": "^1.5.0",
     "inquirer": "^8.0.0",
     "js-base64": "^3.6.1",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "mustache": "^4.2.0",
     "node-fetch": "^2.6.1",
     "promise.series": "^0.2.0",
