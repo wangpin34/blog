@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Bump minimist from 1.2.5 to 1.2.6](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;111)
 - [2022&#x2F;04&#x2F;01: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;110)
 - [2022&#x2F;03&#x2F;25: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;109)
 - [2022&#x2F;03&#x2F;18: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;108)
