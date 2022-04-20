@@ -1,8 +1,9 @@
 # Table of Contents
 
+- [Bump node-fetch from 2.6.1 to 2.6.7](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;116)
+- [Bump async from 3.2.0 to 3.2.3](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;115)
 - [2022&#x2F;04&#x2F;22: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;114)
 - [2022&#x2F;03&#x2F;04: golang 不适合 web service 的 x 个理由](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;106)
-- [Bump node-fetch from 2.6.1 to 3.1.1](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;100)
 - [2021&#x2F;12&#x2F;03: 什么是技术驱动的公司？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;92)
 - [2021&#x2F;10&#x2F;29: OceanBase 刷 star，技术公司开源难题](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;87)
 - [jq 简介：简单实用的命令行 json 工具](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;86)
