@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-- [Bump node-fetch from 2.6.1 to 2.6.7](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;116)
 - [2022&#x2F;04&#x2F;22: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;114)
 - [2022&#x2F;03&#x2F;04: golang 不适合 web service 的 x 个理由](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;106)
 - [2021&#x2F;12&#x2F;03: 什么是技术驱动的公司？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;92)
