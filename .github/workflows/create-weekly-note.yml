@@ -11,8 +11,8 @@ on:
         required: true
         default: <The Topic>
 
-  schedule:
-    - cron: "0 0 * * MON"
+#   schedule:
+#     - cron: "0 0 * * MON"
 
 jobs:
   create_note:
