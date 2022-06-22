@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [2022&#x2F;06&#x2F;17: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;124)
+- [Deno 版本的抖音视频下载 &lt;douyin video downloader](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;124)
 - [2022&#x2F;06&#x2F;10: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;123)
 - [2022&#x2F;06&#x2F;03: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;122)
 - [2022&#x2F;05&#x2F;27: ](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;121)
