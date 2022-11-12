@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Bump minimatch from 3.0.4 to 3.1.2](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;125)
 - [Deno 版本的抖音视频下载 &#x60;douyin video downloader&#x60;](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;124)
 - [2022&#x2F;03&#x2F;04: golang 不适合 web service 的 x 个理由](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;106)
 - [2021&#x2F;12&#x2F;03: 什么是技术驱动的公司？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;92)
