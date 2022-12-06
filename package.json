@@ -23,7 +23,7 @@
     "mustache": "^4.2.0",
     "node-fetch": "^2.6.7",
     "promise.series": "^0.2.0",
-    "qs": "^6.10.1",
+    "qs": "^6.10.3",
     "rxjs": "^6.6.6",
     "url-join": "^4.0.1",
     "winston": "^3.3.3",
