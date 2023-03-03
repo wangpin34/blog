@@ -1,8 +1,5 @@
 # Table of Contents
 
-- [Bump qs from 6.10.1 to 6.10.3](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;128)
-- [Bump decode-uri-component from 0.2.0 to 0.2.2](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;127)
-- [feature request: theme market of markdown previewer](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;126)
 - [Deno 版本的抖音视频下载 &#x60;douyin video downloader&#x60;](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;124)
 - [2022&#x2F;03&#x2F;04: golang 不适合 web service 的 x 个理由](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;106)
 - [2021&#x2F;12&#x2F;03: 什么是技术驱动的公司？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;92)
