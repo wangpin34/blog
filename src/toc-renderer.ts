@@ -1,4 +1,3 @@
-import fs from 'fs/promises'
 import mustache from 'mustache'
 
 export default class Renderer {

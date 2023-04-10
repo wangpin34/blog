@@ -3,9 +3,9 @@ on:
   issues:
     types: [opened, edited, deleted, closed, reopened, locked, unlocked]
   workflow_dispatch:
-  
+
   schedule:
-    - cron: '0 0 */1 * *'
+    - cron: "0 0 */1 * *"
 
 jobs:
   build:
@@ -15,12 +15,15 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 14.x
-          cache: "yarn"
+          version: 7.13.4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: "pnpm"
       - run: make setup
       - run: make build
-      - run: node lib/index.js
+      - run: node lib/index.js update-toc
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

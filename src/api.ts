@@ -1,5 +1,4 @@
 import { URL } from 'url'
-import fetch, { RequestInit, Headers } from 'node-fetch'
 
 export module HTTP {
   export enum Method {
@@ -10,10 +9,12 @@ export module HTTP {
   }
 }
 
-export async function perform(method: HTTP.Method, path: string, options?: RequestInit) {
+export async function perform(method: HTTP.Method, path: string, options?: any) {
   const _headers = options&&options.headers ? options.headers : {}
+  //@ts-ignore
   const headers = new Headers(_headers)
   headers.append('Authorization', `Bearer ${process.env.GITHUB_TOKEN}`)
+  //@ts-ignore
   return fetch(new URL(path, process.env.GITHUB_API_URL).toString(), {
     ...options,
     method,
@@ -21,9 +22,10 @@ export async function perform(method: HTTP.Method, path: string, options?: Reque
   })
 }
 
-export async function performJSON(method: HTTP.Method, path: string, options?: RequestInit) {
+export async function performJSON(method: HTTP.Method, path: string, options?: any) {
   try {
     const _headers = options&&options.headers ? options.headers : {}
+    //@ts-ignore
     const headers = new Headers(_headers)
     headers.append('Accept', 'application/vnd.github.v3+json')
     return await perform(method, path, options ? {...options, headers} : {headers})

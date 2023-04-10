@@ -8,17 +8,11 @@ help:
 	#@cat man.txt
 
 setup:
-	yarn
+	pnpm i
 
 dev:
-	# export GITHUB_TOKEN=
-	export GITHUB_API_URL=https://api.github.com ;\
-	export GITHUB_REPOSITORY=wangpin34/blog ;\
-	ts-node packages/index.ts
+	ts-node src/index.ts update-toc
 
 build:
-	babel packages --out-dir lib \
-		--ignore "*.stories.*","__tests__/*" \
-		--extensions ".ts" \
-		--copy-files \
-		--no-copy-ignored
+	PATH := node_modules/.bin:$(PATH); \
+	rollup -c ./rollup.config.js
