@@ -1,0 +1,29 @@
+name: Update Posts
+on:
+  issues:
+    types: [opened, edited, deleted, closed, reopened, locked, unlocked]
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 0 */1 * *"
+
+jobs:
+  build:
+    runs-on: macos-latest
+    permissions:
+      issues: read
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.13.4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: "pnpm"
+      - run: make setup
+      - run: make build
+      - run: node lib/index.js update-posts
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

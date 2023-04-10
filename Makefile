@@ -1,6 +1,6 @@
 PATH := node_modules/.bin:$(PATH)
 
-.PHONY: help setup dev develop build_github build deploy clean build
+.PHONY: help setup update-toc update-markdown build
 
 help:
 	@echo "Note: Following commands need to be called with Makefile, such as make dev"
@@ -10,8 +10,11 @@ help:
 setup:
 	pnpm i
 
-dev:
+update-toc:
 	ts-node src/index.ts update-toc
+
+update-markdown:
+	ts-node src/index.ts update-markdown
 
 build:
 	PATH := node_modules/.bin:$(PATH); \

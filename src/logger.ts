@@ -6,7 +6,7 @@ const mixin = {
 
 const logger = pino({
   name: 'blog-cli',
-  level: 'trace',
+  level: process.env.NODE_ENV === 'DEVELOPMENT' ? 'trace' : 'info',
   mixin() {
       return {
         ...mixin,
