@@ -6,7 +6,7 @@ const mixin = {
 
 const logger = pino({
   name: 'blog-cli',
-  level: process.env.NODE_ENV === 'DEVELOPMENT' ? 'trace' : 'info',
+  level: process.env.LOG_LEVEL ?? process.env.NODE_ENV === 'DEVELOPMENT' ? 'silent' : 'info',
   mixin() {
       return {
         ...mixin,
@@ -14,5 +14,7 @@ const logger = pino({
       }
   }
 })
+
+logger.trace('this is trace level log')
 
 export default logger

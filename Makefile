@@ -17,5 +17,5 @@ update-markdown:
 	ts-node src/index.ts update-markdown
 
 build:
-	PATH := node_modules/.bin:$(PATH); \
+	@export PATH=node_modules/.bin:$(PATH); \
 	rollup -c ./rollup.config.js
