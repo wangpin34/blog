@@ -1,7 +1,5 @@
 name: Update Posts
 on:
-  issues:
-    types: [opened, edited, deleted, closed, reopened, locked, unlocked]
   workflow_dispatch:
 
   schedule:
@@ -27,3 +25,4 @@ jobs:
       - run: node lib/index.js update-posts
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          LOG_LEVEL: info

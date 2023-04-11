@@ -27,3 +27,4 @@ jobs:
       - run: node lib/index.js update-toc
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          LOG_LEVEL: info
