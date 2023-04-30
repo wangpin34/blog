@@ -1,0 +1,317 @@
+
+---
+title: 2021/07/23: 下雨天点外卖，我错了么?
+tags: 
+---
+## 封面图
+![rafael-garcin-sqZ4GeyYGx8-unsplash](https://user-images.githubusercontent.com/12655367/126750415-ad613e18-f36f-4105-a543-8832d24c8c97.jpg)
+
+Photo by <a href="https://unsplash.com/@nimbus_vulpis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rafael Garcin</a> on <a href="https://unsplash.com/s/photos/cloud?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+## 下雨天点外卖，我错了吗？
+
+ 知乎上有个[问题](https://www.zhihu.com/question/473398757/answer/2013254581)，问"下雨天点外卖，我错了吗？
+"。题主在下雨天点了一份外卖，但是听到旁人评论：“好久没定外卖了，这下雨天订外卖也不忍心，外卖小哥太...”。题主因此而自责内疚，饭也吃不下。
+
+可以假设一下，下雨天，所有的消费者都不约而同的不点外卖了，会有什么后果？
+
+外卖骑手们舒服的躲在家里玩手机？
+商家舒服的躲在柜台后面玩手机？
+
+还是，后一种：
+外卖员靠在电动车上焦急的等待订单？
+商家准备好菜品但是迟迟没有订单进来？
+
+如果你认为不点外卖才是正确的，那么，你的内心里其实认为前一种是现实。你认为，下雨天的时候，外卖员们，商家们，可以难得休息一下，多好，我这不是做善事吗？
+
+但是，现实是，更多骑手，他们哪怕必须顶着风雨，依然会坚持一单一单的送外卖，而商家，也根本不会在下雨天歇业，后厨的菜品早已备好，如果不卖掉，就要砸在手里。而且，你得知道，即便没有菜品，每天的固定支出一分也不会少，房租，水电，厨师的薪水。
+
+所以，只要情况允许，你当然可以点外卖，你支付的每一笔钱，都会支付一部分给商家，一部分给骑手（在这个语境里请先忽略平台抽佣）。你点外卖，就是支持骑手，就这么简单。
+
+## Swift 的观察者模式
+`观察者模式`在 App 开发中非常有用，因为 App 中充斥着各种不断变化的事物，比如按钮的点击，活动的websocket链接，以及对这些`变化`保持关注的个体，比如应该在按钮点击后执行的某个函数，在 websocket 收到新数据后将数据放入本地存储的函数。让`变化`本身负责通知那些`关注者`是不现实的，因为关注者的加入时间，关心的数据，何时离开，并不能在初始化时就唯一确定，往往是频繁变化的。而观察者模式，简单来说，就是让`变化`专注于数据的生产，由`关注者`自行订阅（subscribe/observer）或者取消订阅。这种模式主要参考了传统报刊杂志的订阅模式，描述订阅模式，主要有以下3种方式（不代表具体 API 名称）。
+
+1.  subject 表示`变化`，subscriber 订阅者  subscribe （订阅）和 unsubscribe（取消订阅）。
+2. observable 表示`变化`，observer 观察者 observe （观察）和 unobserve (取消观察)，。
+3. （JS ，Java Swing，Android）Event 表示`变化`，listener （监听器）listen （监听）和 unlisten （取消监听）
+
+虽然略有不同，但是你可以认为`subject`，`observable`和`event`是同样的东西。所以，虽然从简单原则上来说，选择其中一套名词体系就可以了，但依然有某些语言/框架混用 subject 和 observable ，这取决于设计者的偏好。
+
+Swift 使用了第二种 observable 体系，具体有三种方式。
+
+### 第一个：计算属性。
+你可以制定一个属性参考其他属性的变化而变化。如下例所示，fractionCompleted 的当前数值依靠 completedUnitCount 和 totalUnitCount 的商。
+
+```
+class DownloadProgress {
+    private var totalUnitCount: Int64
+    var completedUnitCount: Int64 = 0
+    var fractionCompleted: Float {
+        Float(completedUnitCount)/Float(totalUnitCount)
+    }
+    init(_ totalUnitCount: Int64) {
+        self.totalUnitCount = totalUnitCount
+    }
+}
+
+let p = DownloadProgress(100)
+p.completedUnitCount += 10
+print("fractionCompleted: \(p.fractionCompleted)")
+p.completedUnitCount += 10
+print("fractionCompleted: \(p.fractionCompleted)")
+```
+你不必主动为 `fractionCompleted` 设定数值，每当 `completedUnitCount` 增加，fractionCompleted 的数值就会被更新。
+output:
+```bash
+fractionCompleted: 0.1
+fractionCompleted: 0.2
+```
+
+## 第二种：[属性观察者 Property Observers](https://docs.swift.org/swift-book/LanguageGuide/Properties.html)。
+
+你可以为结构体或类的存储属性（自定义或者继承的）和计算属性（继承的）指定观察者 observer。
+
+```swift
+class Person {
+    private var name: String
+    var age: Int {
+        willSet {
+            print("age will be modified as \(newValue)")
+        }
+        didSet {
+            print("age has been modified")
+        }
+    }
+    
+    init (_ name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+let Bob = Person("Bob", age: 10)
+Bob.age += 1
+```
+
+output:
+```bash
+age will be modified as 11
+age has been modified
+```
+
+> 计算属性和属性观察者，只能类型定义内使用。如果要在类型之外订阅类型某个属性的变化，就需要 [key-value-observing，简称 KVO](https://developer.apple.com/documentation/swift/cocoa_design_patterns/using_key-value_observing_in_swift)。
+
+### 第三种： KVO
+
+```swift
+class Counter: NSObject {
+    @objc dynamic var count = 0
+}
+
+let counter = Counter()
+
+counter.observe(\.count) { (c, changed) in
+    print("Updated count:\(c.count)")
+}
+
+counter.count = 100
+```
+output:
+```bash
+Updated count:100
+```
+因为是在类型定义的外部添加的 observer，有时候，你可能需要自行移除 observer。
+
+```
+let observer = counter.observe(\.count) { (c, changed) in
+    print("Updated count:\(c.count)")
+}
+
+// years later
+observer.invalidate()
+```
+
+> 当然，如果你不满意第三种方式，也可以自行实现一套更加 Java 范的机制，也没问题。Swift 没有接口，抽象类，也不允许多重继承，我们需要使用 protocol 来定义观察者模式。
+
+### 第四种：自定义观察者模式
+
+```swift
+protocol Observer: AnyObject {
+    var id: UUID { get } // used to identify each observer
+    func update(_ subject: Subject)
+}
+protocol Subject: AnyObject {
+    var observers: [UUID:Observer] { get set }
+    func registerObserver(_ observer: Observer)
+    func removeOvserver(_ observer: Observer)
+    func notifyObservers()
+}
+```
+我在 Observer 中定义了一个 id，类型是 UUID。这个 id 用于在 Subject 维护 observer 的 hash 表。当需要移除 observer，使用这个 id 从 Subject 的 observers 删除对应的 key。
+
+实现：
+```swift
+class MyObserver: Observer {
+    var id: UUID = UUID()
+    func update(_ subject: Subject) {
+        let s = subject as! MySubject 
+        print("\(id.hashValue) received update: \(s.state)")
+    }
+}
+
+class MySubject: Subject {
+    var observers: [UUID : Observer] = [:]
+    
+    var state: Int64 = 0 {
+        didSet {
+            self.notifyObservers()
+        }
+    }
+    
+    func registerObserver(_ observer: Observer) {
+        observers[observer.id] = observer
+    }
+    
+    func removeOvserver(_ observer: Observer) {
+        observers[observer.id] = nil
+    }
+    
+    func notifyObservers() {
+        for (_, o) in observers {
+            o.update(self)
+        }
+    }
+}
+```
+MyObserver 中实现的 update 函数里，Subject 必须需要强制向下转型，以便读取相应的属性。MySubject 中，registerObserver， removeOvserver  和 notifyObservers 的是比较通用的实现。如果 Swift 支持多重继承，我就会把这些实现放在 Subject 类里并且表明不允许 override。
+
+手动实现的观察者模式，用法和 Java 的那一套类似。
+```swift
+let subject = MySubject()
+let observer1 = MyObserver()
+let observer2 = MyObserver()
+
+subject.registerObserver(observer1)
+subject.registerObserver(observer2)
+
+subject.state = 1
+subject.state = 2
+```
+
+output:
+```bash
+-5397059656989222738 received update: 1
+8425197807564807762 received update: 1
+-5397059656989222738 received update: 2
+8425197807564807762 received update: 2
+```
+## create-react-app 与 npm init <initializer> 
+create-react-app 除了传统的 `npx create-react-app <project-folder>` 这种用法外，还有下面这些变体：
+```bash
+npm init react-app my-app
+yarn create react-app my-app
+```
+如果你觉得这两个命令比较奇怪，发出类似 “`react-app` 是什么东西呀？”这种叫声，那你可能跟我一样，不了解 [npm-init](https://docs.npmjs.com/cli/v7/commands/npm-init)。
+
+npm init 这个命令大家都熟悉，列出一些问题，如项目名， repo， license，我们输入答案，或者一路回车，结束后，npm 会生成一个 package.json，里面包含了我们输入的答案（如果输入过的话），非常方便。
+
+但是，虽然方便，却少了一些可玩性（扩展性）。所以 npm 6.0 之后，npm 允许我们指定一个 initializer，来扩展原本的 init。
+
+```
+npm init <initializer>
+```
+
+需要注意的 ，initalizer 的 package 名称（或者 bin 的名称）要求必须是 create-<initializer> 。比如，initalizer 的名称叫做 awesome-app，那么，对应的 npm package 名称必须为 create-awesome-app。
+
+initalizer 的 package.json
+```json
+{
+  "name": "create-awesome-app",
+}
+```
+或者，使用 bin 的名字。如果 package 包含很多功能， initializer 只是其中之一，建议使用这种方法。
+
+package.json
+```json
+{
+  "name": "super-hero",
+  "bin": {
+     "create-awesome-app": "lib/awesome-app.js"
+    }
+}
+```
+
+然后，我们就可以使用这个 initializer 来创建项目，通过 npm init 方式使用时，不要写 `create-awesome-app`，而是 `awesome-app`。`create` 只是用来告诉 npm init 它是一个可用的  initializer，所以不应该出现在具体使用的时候。
+```bash
+npm init awesome-app
+```
+npm init 只负责调用具体的 initializer，如何实现是 initializer 自己的问题。比如，是使用 npm init 传统的问答，还是像create-react-app 那样使用几个固定的 option，完全由开发者自己决定。
+
+最后，如果你还记得最前面说的 create-react-app 的几个变体，可能对 yarn 的命令还有点印象，这样：
+```bash
+yarn create react-app my-app
+```
+[yarn create <initializer>](https://classic.yarnpkg.com/en/docs/cli/create/) 和 npm init <initializer> 作用一样，所以，前面的 awesome-app 用 yarn create 也可以。
+```bash
+yarn create awesome-app
+```
+
+## 如何编写“亲民”的技术文档？
+最近与一位同事讨论技术文档的问题，同事认为，技术文档里把具体的 API 作用讲一下就好了。我觉得不是这样，技术文档应该更加“亲民”一点，尤其是当目标受众来自于其他小组时。当然，面向网络的开源项目更应该“亲民”，当然， 这是另一个话题。**本文中的技术文档基本上还是给公司内部其他项目组参考的**。项目内部，因为人员工作紧密，很多知识口头相授就可以了，基本不存在需要阅读文档了解的场合。
+
+那么，如何编写一篇“亲民”的技术文档呢？即，更多的考虑文档阅读者的实际需要。
+首先，我们应该按照阅读技术文档的目的作区分，是纯粹的使用（usage），还是开发 （contribution）？
+
+### Usage 文档
+对于纯粹使用，关键词是`目标导向`，`简单`。目标导向，指的是应该按照`使用场景`而非`功能列表`来安排文档。比如，对于订单系统来说，我们应该编写下述几个场景的文档：
+* 创建订单
+* 订单支付
+* 订单取消
+每个场景应该使用什么 API，应该得到什么反馈，接下来应该做什么，都应该在文档中做`简单`的描述。
+
+好了，既然提到`简单`，那么，怎么样才算简单。
+
+简单，应该是在不产生歧义的情况下，尽可能的精简内容。和`创建订单`这个主题有关系吗？没关系。那就删。
+
+说到这里，你可能会担心：文档这么简单，那万一需要深入某个内容呢？没关系，你当然可以安排进阶（Advanced ）内容在后面的段落。这个段落其实就是同事喜欢的 API 精讲环节。
+
+既然 API 精讲依然是需要的，那为什么还要安排 Usage 文档，来按照使用场景介绍呢？我想有两个原因。
+* 按照二八原理，大部分的文档需求都会命中 Usage 部分。
+* 即使 Usage 部分不满足需要，阅读者依然能够从 Usage 部分得到线索，来导航到 Advanced 部分。
+
+### Contribution 文档
+不同于 User，Contributer 关注的其实是：
+
+* 项目结构
+* 如何 setup 环境
+* 如何 开发
+* 如何 测试
+* 如何 发布
+
+比如，对于如何 setup 开发环境，应该描述清楚一下内容。
+* 推荐的开发环境，设置，等等。
+* 要求的 language 版本，python 2x的项目，当然不能用 python 3x 开发，这个道理。
+* 更复杂的项目，还应该提供 setup 脚本。
+
+没有开源项目经验的人常常会觉得，这些东西，口头讲一下就可以了，多容易。但即便是公司内部项目，“文档化”也比口头更好，原因是：
+* 文档更容易保持一致，而口头传播不能
+* 文档更容易更新发布，而口头传播不能
+* 文档更全面，可以使用各种媒体，图表（一图胜千言）来辅助叙述，而口头传播不能
+
+想象一下，每个新人进入公司，只需要甩一篇文档给她就可以了，那该多好。
+
+当然，维护文档也需要长期的坚持，也是很不容易的事情。
+
+## Tiercel: 功能强大的 Swift 文件下载框架
+这段时间在折腾一个 App，用 RxSwift 改造了下载进度，View 订阅对应的 Observable 获取数据，目前 App 运行还不错。让我纠结的一件是，我写的 Download 部分太丑了，每个 Download 就创建一个 Session，还有对应的 Delegate。但是我对如何优化毫无头绪。幸运的是，我找到了这个  lib，[Tiercel](https://github.com/Danie1s/Tiercel/)，看了它的源码。很多问题好像都有了答案。目前的收获（很多是猜的，有待验证）：
+
+1. URLSession 只需要一个，分配一个固定的 identifier，系统就能在 App Relaunch 后帮我们将后台任务 link 到新 Session 上面。
+2. App 挂掉，后台任务也不会挂掉，而是由系统监护。
+3. Delegate 可以通过 task 的 url 属性来分发 progress，file 数据。不过这也意味着，一个 Session 里不能有同 url 的 task。
+4. ResumeData 有很多奇怪的特性，而且不同系统版本中各有不同，这部分，我不打算一一验证，但是要消化 Tiercel 的结论。
+
+做这些当然远远超过了使用 Tiercel 的需要，而我的目的很简单，通过造轮子的方式掌握 download 方面的知识。
+
+
+
+
