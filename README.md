@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Bump semver from 6.3.0 to 6.3.1](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;pull&#x2F;131)
 - [2023&#x2F;03&#x2F;10: 如何应用 overflow scroll](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;130)
 - [2023&#x2F;03&#x2F;03: 如何为 NextJS 静态页面做鉴权保护？](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;129)
 - [Deno 版本的抖音视频下载 &#x60;douyin video downloader&#x60;](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;124)
