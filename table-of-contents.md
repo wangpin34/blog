@@ -1,5 +1,6 @@
 # Table of Contents
 
+- [如何给常规 app&#x2F;service&#x2F;web 上 MCP](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;134)
 - [记录体重变化](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;133)
 - [领导力培训](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;132)
 - [2023&#x2F;03&#x2F;10: 如何应用 overflow scroll](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;130)
