@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [配置前端开发环境之 Debian on Windows 篇](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;135)
+- [配置开发环境之 Debian on Windows 篇](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;135)
 - [如何给常规 app&#x2F;service&#x2F;web 上 MCP](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;134)
 - [记录体重变化](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;133)
 - [领导力培训](https:&#x2F;&#x2F;github.com&#x2F;wangpin34&#x2F;blog&#x2F;issues&#x2F;132)
