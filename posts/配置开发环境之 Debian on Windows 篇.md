@@ -7,12 +7,18 @@ tags:
 Windows 11 x64
 16GB RAM 
 
-# 安装和配置 NodeJS
+# curl/wget
 
-```bash
+```
 # install curl
 sudo apt-get update
 sudo apt-get install curl
+sudo apt install wget
+```
+
+# 安装和配置 NodeJS
+
+```bash
 # install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 # install nodejs latest
@@ -20,6 +26,14 @@ nvm install node
 # install pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
+
+**注意**：`.npmrc` 文件需放置在 `c://users/{username}` 下 才能起作用。我也不理解为什么放在 debian 用户的根目录下没有生效。
+
+> 使用 `npm config get prefix` 获取系统默认配置路径，也不起作用，google 误我。最后放在 windows 用户根目录下，问题解决。
+> The system default .npmrc file, also known as the global configuration file, is typically located at $PREFIX/etc/npmrc.
+$PREFIX refers to the npm installation prefix, which is where npm is installed on your system. You can find out your npm prefix by running the command:
+Code
+
 
 **完成**。
 
@@ -86,6 +100,14 @@ IdentityFile ~/.ssh/id_ed25519
 
 **完成**。
 
+# zsh + ohmyzsh
+```
+sudo apt install zsh
+
+```
+参考：
+1. https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+2. https://ohmyz.sh/#install
 
 # ~~配置 vscode server~~
 这里直接跳过，vscode 原生可用，不需要安装任何lib。
