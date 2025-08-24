@@ -16,6 +16,18 @@ sudo apt-get install curl
 sudo apt install wget
 ```
 
+**完成**。
+
+# zsh + ohmyzsh
+> 如果要使用 zsh，最好在其他软件安装之前就安装 zsh，这样配置就会自动配置到 .zshrc 文件中。否则，需要手动将已经添加到 .bashrc 中的配置 copy 到 .zshrc 文件。
+```
+sudo apt install zsh
+
+```
+参考：
+1. https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+2. https://ohmyz.sh/#install
+
 # 安装和配置 NodeJS
 
 ```bash
@@ -98,16 +110,7 @@ IdentityFile ~/.ssh/id_ed25519
 ```
 在 github 账户下，导入对应的 public key。
 
-**完成**。
 
-# zsh + ohmyzsh
-```
-sudo apt install zsh
-
-```
-参考：
-1. https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
-2. https://ohmyz.sh/#install
 
 # ~~配置 vscode server~~
 这里直接跳过，vscode 原生可用，不需要安装任何lib。
