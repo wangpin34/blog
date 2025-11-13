@@ -1,19 +1,18 @@
-# 王品
-软件技能：`React`，`Typescript`，`NodeJS`
+# 王品 (Penn)
 
-工作技能：设计模式/重构/需求管理/英语
+工作技能：`React`，`Typescript`，`NodeJS`， `英语`。
 
-邮箱：[dmoneh@163.com](mailto:dmoneh@163.com)
+邮箱：[guyusay@gmail.com](mailto:guyusay@gmail.com)
 
 活动范围：[GitHub](https://github.com/wangpin34), [StackOverflow](https://stackoverflow.com/users/4172742/pengson), [zhihu](https://www.zhihu.com/column/wangpin)
 
 ## 今年做了什么 ？
-* [npm initializer](https://docs.npmjs.com/cli/v7/commands/npm-init/)
-* 基于 `gatsby` 定制的文档引擎
-* 与文档引擎配套使用的 Markdown Editor 和 Chrome Extension
-
+* 第一个里程碑 nodejs service（NestJS + Prisma/Mongoose）。
+* 对 React Component 的组织技巧有了新的感悟。
+* 大量的写 UT for React。
+* 感谢公司提供的 copilot license，感谢免费的 GPT，快速学习了很多以前感兴趣的领域，如 Swift。
 # 项目经历
-* 2021 ~ 现在  - `npm initializer`
+* 2021 ~ 现在  - `GitOps Admin Portal`。
 * 2020 ～ 2021 - `gatsby` 文档引擎，`chrome extension`，`Markdown Editor`
 * 2018 ～ 2019 - 前台项目主要开发：`React`，`Styled-Components`
 
