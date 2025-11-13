@@ -8,11 +8,10 @@
 
 ## 今年做了什么 ？
 * 第一个里程碑 nodejs service（NestJS + Prisma/Mongoose）。
-* 对 React Component 的组织技巧有了新的感悟。
-* 大量的写 UT for React。
-* 感谢公司提供的 copilot license，感谢免费的 GPT，快速学习了很多以前感兴趣的领域，如 Swift。
+* 写了大量的 UT for React。
+* （感谢公司提供的 copilot license，感谢免费的 GPT）快速学习了很多以前感兴趣的领域，如 Swift。
 # 项目经历
-* 2021 ~ 现在  - `GitOps Admin Portal`。
+* 2021 ~ 现在  - Intern Platform 相关的管理平台， 文档仓库， `AI agent`。
 * 2020 ～ 2021 - `gatsby` 文档引擎，`chrome extension`，`Markdown Editor`
 * 2018 ～ 2019 - 前台项目主要开发：`React`，`Styled-Components`
 
