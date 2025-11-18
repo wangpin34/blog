@@ -115,5 +115,8 @@ IdentityFile ~/.ssh/id_ed25519
 # ~~配置 vscode server~~
 这里直接跳过，vscode 原生可用，不需要安装任何lib。
 # 安装和配置 [PostgreSQL](https://www.postgresql.org/)
-
+```
+apt-get update
+apt install postgresql
+```
 
