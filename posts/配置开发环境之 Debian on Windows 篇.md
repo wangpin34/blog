@@ -18,6 +18,12 @@ sudo apt install wget
 
 **完成**。
 
+# Open windows explorer
+```
+explorer.exe .
+explorer.exe /mnt/c/Users
+```
+
 # zsh + ohmyzsh
 > 如果要使用 zsh，最好在其他软件安装之前就安装 zsh，这样配置就会自动配置到 .zshrc 文件中。否则，需要手动将已经添加到 .bashrc 中的配置 copy 到 .zshrc 文件。
 ```
@@ -118,5 +124,14 @@ IdentityFile ~/.ssh/id_ed25519
 ```
 apt-get update
 apt install postgresql
+# To start the PostgreSQL server on Debian Linux, use the following command:
+sudo systemctl start postgresql
+# If you want PostgreSQL to start automatically on boot, enable it with:
+sudo systemctl enable postgresql
+# To check the status of the PostgreSQL service:
+sudo systemctl status postgresql
+# If you need to restart the server:
+sudo systemctl restart postgresql
 ```
+
 
